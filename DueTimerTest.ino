@@ -51,7 +51,7 @@ void setup() {
   TimerStart(TC2, 1, TC7_IRQn, pwmDuty[1], pwmDuty[8]); //D3, D10
   TimerStart(TC2, 2, TC8_IRQn, pwmDuty[9], pwmDuty[10]); //D11,D12
 
-  for(int n = 2; n < 6; n++)  // May not be necessary?
+  for(int n = 2; n < 6; n++)  // Attempt to output timer counter values to hardware pins - May not be necessary?
   {
     int ulPin = n;  
     PIO_Configure(g_APinDescription[ulPin].pPort,
